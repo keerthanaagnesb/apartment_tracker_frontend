@@ -33,6 +33,7 @@ export const API = {
       window.location.replace('/login?expired=1');
       throw new Error('Session expired. Please sign in again.');
     }
+    
     const text = await res.text();
     let data = null;
     try { data = text ? JSON.parse(text) : null; } catch (e) { /* not JSON */ }
